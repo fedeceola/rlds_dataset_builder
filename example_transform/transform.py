@@ -1,6 +1,7 @@
 from typing import Any, Dict
 import numpy as np
 from PIL import Image
+from pyquaternion import Quaternion
 
 
 ################################################################################################
@@ -59,6 +60,7 @@ from PIL import Image
 
 
 def transform_step(step: Dict[str, Any]) -> Dict[str, Any]:
+    ypr_or = Quaternion(step['action'][6], step['action'][3], step['action'][4], step['action'][5]).yaw_pitch_roll
     """Maps step from source dataset to target dataset config.
        Input is dict of numpy arrays."""
     img = Image.fromarray(step['observation']['image']).resize(
@@ -68,7 +70,7 @@ def transform_step(step: Dict[str, Any]) -> Dict[str, Any]:
             'image': np.array(img),
         },
         'action': np.concatenate(
-            [step['action'][:3], step['action'][5:8], step['action'][-2:]]),
+            [step['action'][:3], ypr_or, np.array([step['action'][7]]), np.array([step['is_terminal']])], dtype=np.float32),
     }
 
     # copy over all other fields unchanged

@@ -91,6 +91,7 @@ dependencies:
       - pydot==1.4.2
       - pymongo==4.4.1
       - pyparsing==3.0.9
+      - pyquaternion==0.9.9
       - python-dateutil==2.8.2
       - pytz==2023.3
       - pyyaml==6.0.1
