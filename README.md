@@ -1,3 +1,5 @@
+This repository contains the code to convert the **LHManip** dataset into the RLDS format. The original dataset can be found [here]().
+
 # RLDS Dataset Conversion
 
 This repo demonstrates how to convert an existing dataset into RLDS format for X-embodiment experiment integration.
