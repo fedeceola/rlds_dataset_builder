@@ -1,4 +1,4 @@
-This repository contains the code to convert the **LHManip** dataset into the RLDS format. The original dataset can be found [here]().
+This repository contains the code to convert the **LHManip** dataset into the RLDS format. The original dataset can be found [here](https://www.dropbox.com/scl/fi/9sgjd6cifryh6u6lirzhn/long_horizon_manipulation_dataset.zip?rlkey=xfnc7taysflsohzx42xn7xxzm&dl=0).
 
 # RLDS Dataset Conversion
 
